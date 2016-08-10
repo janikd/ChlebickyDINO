@@ -1,0 +1,131 @@
+{block content}
+
+<div class="section-title">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="section__inner">
+					<h2 class="ui-title-page" n:block="title">Objednat</h2>
+					<ol class="breadcrumb">
+						<li><a n:href="Homepage:default">Domů</a></li>
+						<li><a n:href="Cart:default">Košík</a></li>
+						<li class="active">Zaplatit</li>
+					</ol>
+				</div>
+				<!-- end section__inner -->
+			</div>
+			<!-- end col -->
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end container -->
+</div>
+
+<div class="section_mod-f">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<form class="form-details">
+					<section class="section-area">
+						<h2 class="ui-title-inner ui-title-inner_mod-a">Fakturační údaje</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<label class="ui-form-label">JMÉNO *</label>
+								<input class="form-control" type="text">
+							</div>
+							<div class="col-md-6">
+								<label class="ui-form-label">PŘÍJMENÍ *</label>
+								<input class="form-control" type="text">
+							</div>
+						</div>
+						<label class="ui-form-label">ADRESA *</label>
+						<input class="form-control form-control_second" type="text" placeholder="Street address">
+						<input class="form-control" type="text" placeholder="Apartment, suite, unit etc. (optional)">
+						<label class="ui-form-label">MĚSTO *</label>
+						<input class="form-control" type="text" placeholder="Town / City">
+						<div class="row">
+							<div class="col-md-6">
+								<label class="ui-form-label">EMAIL *</label>
+								<input class="form-control" type="text">
+							</div>
+							<div class="col-md-6">
+								<label class="ui-form-label">TELEFON *</label>
+								<input class="form-control" type="text">
+							</div>
+						</div>
+					</section>
+					<!-- end section -->
+				</form>
+			</div>
+			<!-- end col -->
+
+			<div class="col-md-4">
+				<div class="section-table-order section-table-order_mod-a">
+					<section class="section-area">
+						<h2 class="table-order__title ui-title-inner">Vaše objednávka</h2>
+						<table class="table-order">
+							<thead>
+							<tr>
+								<th>PRODUKT</th>
+								<th>CELKEM</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td class="no-br">Moorish Lamb<span class="color_primary"> x </span><span
+											class="enumerator__input">1</span>
+								</td>
+								<td>
+									<span class="table-order__price">$19.00</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="no-br">Vegetarian Supreme<span class="color_primary"> x </span><span
+											class="enumerator__input">1</span>
+								</td>
+								<td>
+									<span class="table-order__price">$34.00</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="border-cell no-br">Spiced Pumpkin<span class="color_primary"> x </span><span
+											class="enumerator__input">1</span>
+								</td>
+								<td class="border-cell">
+									<span class="table-order__price">$26.00</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="table-order__total">OBJEDNÁVKA CELKEM</td>
+								<td class="table-order__total">$79.00</td>
+							</tr>
+							</tbody>
+						</table>
+					</section>
+					<!-- end section-area -->
+
+					<section class="section_mod-g">
+						<h2 class="table-order__title ui-title-inner">Platební metody</h2>
+						<form class="form-payment">
+							<input class="form-payment__radio forms__check hidden" id="form-payment_cheque" type="radio"
+								   name="payment" value="cheque" checked>
+							<label class="form-payment__radio-label forms__label forms__label-radio"
+								   for="form-payment_cheque">
+								<span class="form-payment__item-title">V hotovosti na prodejně</span>
+							</label>
+							<a class="form-payment__btn ui-btn ui-btn-primary btn-effect" href="javascript:void(0);">dokončit
+								objednávku</a>
+						</form>
+					</section>
+
+
+				</div>
+				<!-- end section-table-order -->
+			</div>
+			<!-- end col -->
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end container -->
+</div>
+<!-- end section_mod-b -->

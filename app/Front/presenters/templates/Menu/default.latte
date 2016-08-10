@@ -1,0 +1,55 @@
+{block content}
+
+<div class="section-title">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="section__inner">
+					<h2 class="ui-title-page" n:block="title">Naše nabídka</h2>
+					<ol class="breadcrumb">
+						<li><a n:href="Homepage:default">Domů</a></li>
+						<li class="active">Naše nabídka</li>
+					</ol>
+				</div>
+				<!-- end section__inner -->
+			</div>
+			<!-- end col -->
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end container -->
+</div>
+<!-- end section-title -->
+
+<div class="section-catalog">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="pizza-builder__wrap-check">
+
+					<div n:foreach="$images as $image" class="pizza-builder__item pizza-builder__item_mod-b"
+													   tabindex="1">
+						<div class="pizza-builder__check-img pizza-builder__check-img pizza-builder__check-img_mod-a">
+							<img class="img-responsive center-block"
+								 src="{$basePath}/resources/front/assets/media/sandwich/{$image}/258.png" height="200"
+								 width="258" alt="Foto">
+						</div>
+						<div class="pizza-builder__check-name">Chlebíček {$image}</div>
+						<div class="pizza-builder__check-description pizza-builder__check-description_mod-a">Slow Cooked
+							Pulled Chicken marinated in Bulgogi sauce, Shitake Mushrooms, Shallots on a Garlic base,
+							Garnished with Kimchi, Red & Green Chilli
+						</div>
+						<div class="pizza-builder__check-price pizza-builder__check-price_mod-a">25 Kč</div>
+						<a class="pizza-builder__btn-select ui-btn ui-btn-primary btn-effect"
+						   href="javascript:void(0);">přidat</a>
+					</div>
+
+				</div>
+			</div>
+			<!-- end col -->
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end container -->
+</div>
+<!-- end section-catalog -->

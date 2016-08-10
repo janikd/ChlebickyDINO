@@ -1,0 +1,174 @@
+{block content}
+<div class="main-slider slider-pro" id="my-slider"
+	 data-slider-width="1920"
+	 data-slider-height="1080">
+
+	<div class="sp-slides">
+
+		<!-- Slide 1 -->
+		<div class="sp-slide">
+			<img class="sp-image img-responsive"
+				 src="{$basePath}/resources/front/assets/media/main-slider/main-slider_bg-1.jpg" height="1080"
+				 width="1920" alt="slider">
+			<span class="sp-layer main-slider__title"
+				  data-horizontal="0"
+				  data-vertical="-23%"
+				  data-position="centerCenter"
+				  data-show-transition="up"
+				  data-hide-transition="down"
+				  data-show-duration="800"
+				  data-show-delay="400"
+				  data-hide-delay="400">
+									Čerstvé chlebíčky Dino
+								</span>
+			<div class="sp-layer main-slider__text text-center"
+				 data-horizontal="0"
+				 data-vertical="19%"
+				 data-position="centerCenter"
+				 data-width="45%"
+				 data-height="30%"
+				 data-show-transition="up"
+				 data-hide-transition="down"
+				 data-show-duration="800"
+				 data-show-delay="1200"
+				 data-hide-delay="1200">
+				<p class="hidden-xs">Každý den pro Vás chystáme čerstvé a pestré chlebíčky.</p>
+				<a class="ui-btn ui-btn_mod-a btn-effect" n:href="Menu:default">objednat online</a>
+			</div>
+		</div>
+		<!-- end sp-slide -->
+
+	</div>
+	<!-- end sp-slides -->
+</div>
+<!-- end main-slider -->
+
+<!-- HEADER -->
+<header class="header clearfix wow slideInUp" data-wow-duration="2s">
+	<div class="header__wrap">
+		<span class="sb-toggle-left"><i class="icon pe-7s-menu"></i></span>
+		<a class="logo" n:href="Homepage:default">Chlebíčky <img class="img-responsive"
+																 src="{$basePath}/resources/front/assets/img/logo_mod-a.png"
+																 alt="Logo"></a>
+		<span class="header-basket sb-toggle-right"><i class="icon pe-7s-cart"></i><span
+					class="header-basket__number">2</span></span>
+	</div>
+</header>
+<!-- end header -->
+
+
+<section class="section-default">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 class="ui-title-block wow fadeInUp" data-wow-duration="2s">Delame chlebicky.</h2>
+				<p class="ui-subtitle-block wow fadeInUp" data-wow-duration="2s">{$lorem}</p>
+
+				<div class="advantages">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="advantages__item wow fadeInLeft" data-wow-duration="2s">
+								<i class="icon pe-7s-leaf"></i>
+								<h3 class="advantages__title ui-title-inner">Zdravé</h3>
+								<div class="advantages__description">{$lorem}</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="advantages__item wow fadeInUp" data-wow-duration="2s">
+								<i class="icon pe-7s-medal"></i>
+								<h3 class="advantages__title ui-title-inner">Chutné</h3>
+								<div class="advantages__description">{$lorem}</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="advantages__item wow fadeInRight" data-wow-duration="2s">
+								<i class="icon pe-7s-rocket"></i>
+								<h3 class="advantages__title ui-title-inner">Nápadité</h3>
+								<div class="advantages__description">{$lorem}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end advantages -->
+			</div>
+			<!-- end col -->
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end container -->
+</section>
+<!-- end section-default -->
+
+
+<div class="section-bg_mod-c wow bounceInUp" data-wow-duration="2s">
+	<div class="container">
+		<div class="slider-goods slider-type-a slider_mod-a owl-carousel owl-theme owl-theme_mod-a enable-owl-carousel"
+			 data-pagination="false"
+			 data-navigation="true"
+			 data-single-item="true"
+			 data-auto-play="7000"
+			 data-transition-style="fade"
+			 data-main-text-animation="true"
+			 data-after-init-delay="2000"
+			 data-after-move-delay="1000"
+			 data-stop-on-hover="true">
+
+			<div class="slider-type-a__item">
+				<div class="slider-type-a__img"><img class="img-responsive"
+													 src="{$basePath}/resources/front/assets/media/sandwich/6/600.png"
+													 height="617" width="618" alt="Foto"></div>
+				<div class="slider-type-a__inner">
+					<div class="slider-type-a__name">Řepa</div>
+					<div class="slider-type-a__price">$18 - $37</div>
+					<div class="slider-type-a__description">Marinated Chicken Breast Fillets, Shallots, Roasted
+						Capsicum, Caramelised Onions & Bocconcini on a Tomato base, topped with Peri-Peri sauce
+					</div>
+					<a class="ui-btn ui-btn-primary btn-effect" href="javascript:void(0);">order now</a>
+				</div>
+			</div>
+
+			<div class="slider-type-a__item">
+				<div class="slider-type-a__img"><img class="img-responsive"
+													 src="{$basePath}/resources/front/assets/media/sandwich/2/600.png"
+													 height="617" width="618" alt="Foto"></div>
+				<div class="slider-type-a__inner">
+					<div class="slider-type-a__name">Sýr</div>
+					<div class="slider-type-a__price">$18 - $37</div>
+					<div class="slider-type-a__description">Marinated Chicken Breast Fillets, Shallots, Roasted
+						Capsicum, Caramelised Onions & Bocconcini on a Tomato base, topped with Peri-Peri sauce
+					</div>
+					<a class="ui-btn ui-btn-primary btn-effect" href="javascript:void(0);">order now</a>
+				</div>
+			</div>
+
+			<div class="slider-type-a__item">
+				<div class="slider-type-a__img"><img class="img-responsive"
+													 src="{$basePath}/resources/front/assets/media/sandwich/5/600.png"
+													 height="617" width="618" alt="Foto"></div>
+				<div class="slider-type-a__inner">
+					<div class="slider-type-a__name">Vejce</div>
+					<div class="slider-type-a__price">$18 - $37</div>
+					<div class="slider-type-a__description">Marinated Chicken Breast Fillets, Shallots, Roasted
+						Capsicum, Caramelised Onions & Bocconcini on a Tomato base, topped with Peri-Peri sauce
+					</div>
+					<a class="ui-btn ui-btn-primary btn-effect" href="javascript:void(0);">order now</a>
+				</div>
+			</div>
+		</div>
+		<!-- end slider -->
+	</div>
+	<!-- end container -->
+</div>
+<!-- end section-bg_mod-c -->
+
+<div class="row candyStoreTransition">
+	<div class="col-lg-12 text-center">
+		<blockquote>
+			<p>Jste spíše na sladké? Vyzkoušejte z nabídky <a href="http://cukrarna-dino.cz/" target="_blank">Cukrárny
+					DINO</a>.
+			</p>
+		</blockquote>
+	</div>
+</div>

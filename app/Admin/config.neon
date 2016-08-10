@@ -1,0 +1,6 @@
+# Admin config #
+services:
+	# Forms #
+	- App\Admin\Components\AuthFormFactory
+
+	authenticator: App\Admin\Model\Authenticator

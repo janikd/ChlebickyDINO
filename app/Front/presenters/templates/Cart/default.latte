@@ -1,0 +1,116 @@
+{block content}
+
+<div class="section-title">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="section__inner">
+					<h2 class="ui-title-page" n:block="title">Košík</h2>
+					<ol class="breadcrumb">
+						<li><a href="home.html">Domů</a></li>
+						<li class="active">Košík</li>
+					</ol>
+				</div>
+				<!-- end section__inner -->
+			</div>
+			<!-- end col -->
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end container -->
+</div>
+<!-- end section-title -->
+
+<div class="section_mod-d">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="table-container">
+					<table class="table table-cart-order">
+						<thead>
+						<tr>
+							<th></th>
+							<th>PRODUCT</th>
+							<th>price</th>
+							<th>QTY</th>
+							<th>TOTAL</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class=""><span class="no-br"><i class="icon-close fa fa-times js-del"></i><img
+											class="table-cart-order__img img-responsive"
+											src="{$basePath}/resources/front/assets/media/sandwich/2/600.png"
+											height="109" width="109" alt="Foto"></span></td>
+							<td class="">
+								<span class="table-cart-order__name">Moorish Lamb</span>
+								<span class="table-cart-order__size"><b>Size:</b> Large</span>
+							</td>
+							<td class=""><span class="table-cart-order__price">$19.00</span></td>
+							<td class=""><span class="table-cart-order__number">1</span></td>
+							<td class=""><span class="table-cart-order__price">$19.00</span></td>
+						</tr>
+						<tr>
+							<td class=""><span class="no-br"><i class="icon-close fa fa-times js-del"></i><img
+											class="table-cart-order__img img-responsive"
+											src="{$basePath}/resources/front/assets/media/sandwich/4/600.png"
+											height="109" width="111" alt="Foto"></span></td>
+							<td class="">
+								<span class="table-cart-order__name">Vegetarian Supreme</span>
+								<span class="table-cart-order__size"><b>Size:</b> Jumbo</span>
+							</td>
+							<td class=""><span class="table-cart-order__price">$34.00</span></td>
+							<td class=""><span class="table-cart-order__number">1</span></td>
+							<td class=""><span class="table-cart-order__price">$34.00</span></td>
+						</tr>
+						<tr>
+							<td class=""><span class="no-br"><i class="icon-close fa fa-times js-del"></i><img
+											class="table-cart-order__img img-responsive"
+											src="{$basePath}/resources/front/assets/media/sandwich/6/600.png"
+											height="111" width="111" alt="Foto"></span></td>
+							<td class="">
+								<span class="table-cart-order__name">Spiced Pumpkin</span>
+								<span class="table-cart-order__size"><b>Size:</b> Small</span>
+							</td>
+							<td class=""><span class="table-cart-order__price">$26.00</span></td>
+							<td class=""><span class="table-cart-order__number">1</span></td>
+							<td class=""><span class="table-cart-order__price">$26.00</span></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- end col -->
+
+			<div class="col-md-4">
+				<section class="section-table-order">
+					<h2 class="table-totals__title ui-title-inner">Cart Totals</h2>
+					<table class="table-totals">
+						<tbody>
+						<tr>
+							<td><b>CART SUBTOTAL</b></td>
+							<td class="text-right">$79.00</td>
+						</tr>
+						<tr>
+							<td class="border-cell"><b>SHIPPING AND HANDLING</b></td>
+							<td class="border-cell text-right">Free Shipping</td>
+						</tr>
+						<tr>
+							<td class="table-totals__total">Order Total</td>
+							<td class="table-totals__total">$79.00</td>
+						</tr>
+						</tbody>
+					</table>
+					<a class="table-totals__btn ui-btn ui-btn_mod-a btn-effect" href="javascript:void(0);">aktualizovat
+						košík</a>
+					<a class="table-totals__btn ui-btn ui-btn-primary btn-effect" n:href="Cart:checkout">Objednat</a>
+				</section>
+				<!-- end section-table-order -->
+			</div>
+			<!-- end col -->
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end container -->
+</div>
+<!-- end section_mod-b -->

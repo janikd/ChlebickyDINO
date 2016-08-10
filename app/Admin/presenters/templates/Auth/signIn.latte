@@ -1,0 +1,27 @@
+{block content}
+<div class="login-box">
+	<div class="login-logo">
+		<a n:href="Auth:signIn"><b>Chlebíčky</b>DINO</a>
+	</div>
+	<!-- /.login-logo -->
+	{include '../_flashes.latte'}
+	<div class="login-box-body">
+		<p class="login-box-msg">Přihlášení do administrace</p>
+		<form n:name="authForm">
+			<div class="form-group has-feedback">
+				<input n:name="email" class="form-control" placeholder="Email">
+				<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+			</div>
+			<div class="form-group has-feedback">
+				<input n:name="password" class="form-control" placeholder="Heslo">
+				<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-3">
+					<button n:name="submit" class="btn btn-primary btn-block btn-flat">Přihlásit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<!-- /.login-box-body -->
+</div>
