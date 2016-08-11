@@ -22,8 +22,8 @@
 						<tr n:foreach="$categories as $category">
 							<td>{$category->getPosition()}.
 								<div class="pull-right inline">
-									<a n:href="MoveUp!, $category->getId()" class="text-right"><i class="fa fa-arrow-up"></i></a>
-									<a n:href="MoveDown!, $category->getId()" class="text-right"><i class="fa fa-arrow-down"></i></a>
+									<a n:if="!$iterator->isFirst()" n:href="MoveUp!, $category->getId()" class="text-right" title="Přesunout nahoru"><i class="fa fa-arrow-up"></i></a>
+									<a n:if="!$iterator->isLast()" n:href="MoveDown!, $category->getId()" class="text-right" title="Přesunout dolů"><i class="fa fa-arrow-down"></i></a>
 								</div>
 							</td>
 							<td>{$category->getName()}</td>
