@@ -32,6 +32,7 @@
 	<link rel="stylesheet" href="{$basePath}/resources/admin/plugins/daterangepicker/daterangepicker.css">
 	<!-- bootstrap wysihtml5 - text editor -->
 	<link rel="stylesheet" href="{$basePath}/resources/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+	<link rel="stylesheet" href="{$basePath}/resources/admin/plugins/sweetAlert/sweetalert.css">
 	<link href="{$basePath}/favicon.png?v=2" type="image/png" rel="shortcut icon">
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -41,7 +42,7 @@
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini">
 <div class="wrapper">
 
 	<header class="main-header">
@@ -76,6 +77,7 @@
 								class="fa fa-shopping-bag"></i><span>Objednávky</span></a></li>
 				<li n:class="$presenter->isLinkCurrent('Customer:default') ? active"><a n:href="Customer:default"><i
 								class="fa fa-users"></i><span>Zákazníci</span></a></li>
+				<li><a href=""><i class="fa fa-book"></i> <span>Nápověda</span></a></li>
 
 				<li class="header">Chlebíčky</li>
 				<li n:class="$presenter->isLinkCurrent('Sandwich:default') ? active"><a n:href="Sandwich:default"><i
@@ -93,7 +95,11 @@
 					</a>
 					<ul class="treeview-menu">
 						<li n:class="$presenter->isLinkCurrent('Material:default') ? active">
-							<a n:href="Material:default"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+							<a n:href="Material:default"><i class="fa fa-circle-o"></i> Pečivo</a></li>
+
+						<li n:class="($presenter->isLinkCurrent('Material:category') OR $presenter->isLinkCurrent('Material:categoryEdit')) ? active">
+							<a n:href="Material:category"><i class="fa fa-pencil"></i> Upravit kategorie</a>
+						</li>
 					</ul>
 				</li>
 				<li><a n:href="Material:default"><i class="fa fa-plus"></i> <span>Přidat surovinu</span></a></li>
@@ -168,6 +174,8 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{$basePath}/resources/admin/dist/js/demo.js"></script>
 
-<script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
+<script src="{$basePath}/resources/admin/plugins/sweetAlert/sweetalert.min.js"></script>
+<script src="{$basePath}/resources/admin/plugins/netteForms.min.js"></script>
+
 </body>
 </html>
