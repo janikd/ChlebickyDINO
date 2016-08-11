@@ -53,6 +53,7 @@ class AuthFormFactory extends Nette\Object
 		$presenter = $form->getPresenter();
 		try {
 			$presenter->getUser()->login($values->email, $values->password);
+			$presenter->getUser()->setExpiration(60 * 60 * 24);
 			$presenter->flashMessage('Vítejte v systému pro správu webu.', 'success');
 			$presenter->restoreRequest($this->backlink);
 			$presenter->redirect('Dashboard:default');
