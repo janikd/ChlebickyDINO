@@ -2,5 +2,13 @@
 services:
 	# Forms #
 	- App\Admin\Components\AuthFormFactory
+	- App\Admin\Components\CreateResourceCategoryFormFactory
 
+	# Components #
+
+	# Services #
+	- App\Admin\Model\Resources\CategoryManager
 	authenticator: App\Admin\Model\Authenticator
+
+extensions:
+	librette.doctrine.sortable: Librette\Doctrine\Sortable\DI\SortableExtension
