@@ -68,7 +68,7 @@ abstract class AbstractManager extends Nette\Object implements IManager
 	 * @return EntityManager
 	 * @throws ORMModelException
 	 */
-	protected function flush($entity = null)
+	public function flush($entity = null)
 	{
 		try {
 			return $this->entityManager->flush($entity);
@@ -83,7 +83,7 @@ abstract class AbstractManager extends Nette\Object implements IManager
 	 * @return EntityManager
 	 * @throws ORMModelException
 	 */
-	protected function persist($entity)
+	public function persist($entity)
 	{
 		try {
 			return $this->entityManager->persist($entity);
@@ -97,7 +97,7 @@ abstract class AbstractManager extends Nette\Object implements IManager
 	 * Entity save shortcut
 	 * @param $entity
 	 */
-	protected function save($entity)
+	public function save($entity)
 	{
 		$this->persist($entity);
 		$this->flush();
@@ -108,10 +108,11 @@ abstract class AbstractManager extends Nette\Object implements IManager
 	 * @return EntityManager
 	 * @throws ORMModelException
 	 */
-	protected function remove($entity)
+	public function remove($entity)
 	{
 		try {
-			return $this->entityManager->remove($entity);
+			$this->entityManager->remove($entity);
+			$this->entityManager->flush();
 		} catch (ORMException $e) {
 			Debugger::log($e, ILogger::EXCEPTION);
 			throw new ORMModelException();
@@ -127,6 +128,10 @@ abstract class AbstractManager extends Nette\Object implements IManager
 	 */
 	public function find($id, $throwException = false)
 	{
+		if(!$id) {
+			throw new NotFoundException();
+		}
+
 		$key = md5($id);
 
 		if ($this->hasCache($key)) {
