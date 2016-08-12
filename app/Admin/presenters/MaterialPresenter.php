@@ -14,6 +14,9 @@ use App\Admin\Model\Resources\CategoryManager;
 class MaterialPresenter extends SecuredPresenter
 {
 
+	/**
+	 * @param $id
+	 */
 	public function renderDefault($id)
 	{
 		$this->getTemplate()->category = $this->getCategoryManager()->find($id, CategoryManager::THROW_EXCEPTION);
