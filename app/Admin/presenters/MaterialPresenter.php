@@ -73,7 +73,7 @@ class MaterialPresenter extends SecuredPresenter
 	/**
 	 *
 	 */
-	public function actionCategory()
+	public function renderCategory()
 	{
 		$this->getTemplate()->categories = $this->categories = $this->categoryManager->findAll();
 	}
