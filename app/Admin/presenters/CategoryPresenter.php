@@ -19,11 +19,17 @@ class CategoryPresenter extends SecuredPresenter
 	/** @var CreateResourceCategoryFormFactory @inject */
 	public $createResourceCategoryFormFactory;
 
+	/**
+	 *
+	 */
 	public function renderDefault()
 	{
 		$this->getTemplate()->categories = $this->getCategoryManager()->findAll();
 	}
 
+	/**
+	 * @param $id
+	 */
 	public function renderEdit($id) {
 		try {
 			$this->getTemplate()->category = $this->getCategoryManager()->find($id, CategoryManager::THROW_EXCEPTION);
