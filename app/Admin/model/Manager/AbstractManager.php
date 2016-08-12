@@ -123,6 +123,7 @@ abstract class AbstractManager extends Nette\Object implements IManager
 	 * @param $id
 	 * @param bool $throwException
 	 * @return mixed
+	 * @throws NotFoundException
 	 */
 	public function find($id, $throwException = false)
 	{
@@ -133,6 +134,10 @@ abstract class AbstractManager extends Nette\Object implements IManager
 		}
 
 		$result = $this->repository->find($id);
+
+		if(!$result AND $throwException) {
+			throw new NotFoundException();
+		}
 
 		return $this->writeCache($key, $result);
 	}
