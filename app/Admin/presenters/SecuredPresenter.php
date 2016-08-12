@@ -21,6 +21,7 @@ class SecuredPresenter extends Presenter
 	public function handleLogOut()
 	{
 		$this->getUser()->logout(TRUE);
+		$this->flashMessage('Váš účet byl odhlášen.', "success");
 		$this->redirect('Auth:signIn');
 	}
 }
