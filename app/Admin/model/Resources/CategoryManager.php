@@ -29,7 +29,6 @@ class CategoryManager extends AbstractManager
 		return parent::findBy([], ['position' => 'ASC']);
 	}
 
-
 	/**
 	 * @param Category $newCategory
 	 * @throws CreateModelException
