@@ -87,22 +87,23 @@
 
 
 				<li class="header">Suroviny</li>
-				<li n:class="$presenter->isLinkCurrent('Material:*') ? 'active treeview' : 'treeview'">
+				<li n:class="($presenter->isLinkCurrent('Material:default') OR $presenter->isLinkCurrent('Category:*')) ? 'active treeview' : 'treeview'">
 					<a href="{$basePath}/resources/admin/#">
 						<i class="fa fa-clone"></i>
 						<span>Kategorie</span>
 						<span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
 					</a>
 					<ul class="treeview-menu">
-						<li n:class="$presenter->isLinkCurrent('Material:default') ? active">
-							<a n:href="Material:default"><i class="fa fa-circle-o"></i> Pečivo</a></li>
+						<li n:foreach="$materialCategories as $iterator => $menuCategory" n:class="$presenter->isLinkCurrent('Material:default', $menuCategory->getId()) ? active">
+							<a n:href="Material:default, $menuCategory->getId()"><i class="fa fa-circle-o"></i> {$iterator+1}. {$menuCategory->getName()}</a>
+						</li>
 
-						<li n:class="($presenter->isLinkCurrent('Material:category') OR $presenter->isLinkCurrent('Material:categoryEdit')) ? active">
-							<a n:href="Material:category"><i class="fa fa-pencil"></i> Upravit kategorie</a>
+						<li n:class="($presenter->isLinkCurrent('Category:default') OR $presenter->isLinkCurrent('Category:edit')) ? active">
+							<a n:href="Category:default"><i class="fa fa-pencil"></i> Upravit kategorie</a>
 						</li>
 					</ul>
 				</li>
-				<li><a n:href="Material:default"><i class="fa fa-plus"></i> <span>Přidat surovinu</span></a></li>
+				<li n:class="$presenter->isLinkCurrent('Material:add') ? active"><a n:href="Material:add" ><i class="fa fa-plus"></i> <span>Přidat surovinu</span></a></li>
 			</ul>
 		</section>
 		<!-- /.sidebar -->
@@ -176,6 +177,7 @@
 
 <script src="{$basePath}/resources/admin/plugins/sweetAlert/sweetalert.min.js"></script>
 <script src="{$basePath}/resources/admin/plugins/netteForms.min.js"></script>
+<script src="{$basePath}/resources/admin/dist/js/custom.js"></script>
 
 </body>
 </html>
