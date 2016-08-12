@@ -5,10 +5,27 @@
 
 namespace App\Admin\Presenters;
 
+use App\Admin\Model\Resources\CategoryManager;
 use Nette\Application\UI\Presenter;
 
 class SecuredPresenter extends Presenter
 {
+	protected $materialCategories;
+
+	private $categoryManager;
+
+	public function __construct(CategoryManager $categoryManager)
+	{
+		parent::__construct();
+		$this->categoryManager = $categoryManager;
+	}
+
+	public function beforeRender()
+	{
+		parent::beforeRender();
+		$this->materialCategories = $this->categoryManager->findAll();
+	}
+
 	public function startup()
 	{
 		parent::startup();
