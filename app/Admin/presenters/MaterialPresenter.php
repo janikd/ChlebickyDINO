@@ -6,7 +6,6 @@
 namespace App\Admin\Presenters;
 
 use App\Admin\Components\CreateResourceCategoryFormFactory;
-use App\Admin\Model\ModelException;
 use App\Admin\Model\NotFoundException;
 use App\Admin\Model\Resources\CategoryManager;
 use App\Admin\Model\UpdateModelException;
@@ -24,11 +23,6 @@ class MaterialPresenter extends SecuredPresenter
 
 	/** @var CreateResourceCategoryFormFactory @inject */
 	public $createResourceCategoryFormFactory;
-
-	/**
-	 * @var
-	 */
-	private $categories;
 
 	/**
 	 * MaterialPresenter constructor.
@@ -75,7 +69,7 @@ class MaterialPresenter extends SecuredPresenter
 	 */
 	public function renderCategory()
 	{
-		$this->getTemplate()->categories = $this->categories = $this->categoryManager->findAll();
+		$this->getTemplate()->categories = $this->categoryManager->findAll();
 	}
 
 	/**
@@ -83,8 +77,6 @@ class MaterialPresenter extends SecuredPresenter
 	 */
 	public function createComponentCreateResourceCategoryForm()
 	{
-		$factory = $this->createResourceCategoryFormFactory;
-
-		return $factory->create();
+		return $this->createResourceCategoryFormFactory->create();
 	}
 }
