@@ -5,38 +5,12 @@
 
 namespace App\Admin\Presenters;
 
-use App\Admin\Model\Resources\CategoryManager;
-use Nette\Application\UI\Presenter;
-
 /**
  * Class SecuredPresenter
  * @package App\Admin\Presenters
  */
-class SecuredPresenter extends Presenter
+class SecuredPresenter extends BasePresenter
 {
-	/**
-	 * @var CategoryManager
-	 */
-	private $categoryManager;
-
-	/**
-	 * SecuredPresenter constructor.
-	 * @param CategoryManager $categoryManager
-	 */
-	public function __construct(CategoryManager $categoryManager)
-	{
-		parent::__construct();
-		$this->categoryManager = $categoryManager;
-	}
-
-	/**
-	 * Put materialCategories into template variables before render
-	 */
-	public function beforeRender()
-	{
-		parent::beforeRender();
-		$this->getTemplate()->materialCategories = $this->categoryManager->findAll();
-	}
 
 	/**
 	 * Presenter startup lifehook
@@ -58,13 +32,5 @@ class SecuredPresenter extends Presenter
 		$this->getUser()->logout(TRUE);
 		$this->flashMessage('Váš účet byl odhlášen.', "success");
 		$this->redirect('Auth:signIn');
-	}
-
-	/**
-	 * @return CategoryManager
-	 */
-	public function getCategoryManager()
-	{
-		return $this->categoryManager;
 	}
 }
