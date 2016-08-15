@@ -24,21 +24,18 @@
 	<div id="sb-site">
 
 		<div class="wrap-content">
-
-			{if !$presenter->isLinkCurrent('Homepage:default')}
-				<!-- HEADER -->
-				<header class="header clearfix">
-					<div class="header__wrap">
-						<span class="sb-toggle-left"><i class="icon pe-7s-menu"></i></span>
-						<a class="logo" n:href="Homepage:default">Chlebíčky <img class="img-responsive"
+			<!-- HEADER -->
+			<header class="header clearfix">
+				<div class="header__wrap">
+					<span class="sb-toggle-left"><i class="icon pe-7s-menu"></i></span>
+					<a class="logo" n:href="Homepage:default"><h1>Chlebíčky <img class="img-responsive"
 																				 src="{$basePath}/resources/front/assets/img/logo_mod-a.png"
-																				 alt="Logo"></a>
-						<span class="header-basket sb-toggle-right"><i class="icon pe-7s-cart"></i><span
-									class="header-basket__number">2</span></span>
-					</div>
-				</header>
-				<!-- end header -->
-			{/if}
+																				 alt="Logo"></h1></a>
+					<span class="header-basket sb-toggle-right"><i class="icon pe-7s-cart"></i><span
+								class="header-basket__number">2</span></span>
+				</div>
+			</header>
+			<!-- end header -->
 
 			{include content}
 
