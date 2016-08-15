@@ -3,6 +3,7 @@ services:
 	# Forms #
 	- App\Admin\Components\AuthFormFactory
 	- App\Admin\Components\CreateResourceCategoryFormFactory
+	- App\Admin\Components\UpdateResourceCategoryFormFactory
 
 	# Components #
 

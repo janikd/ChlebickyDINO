@@ -10,20 +10,19 @@
 					<h3 class="box-title">Upravit kategorii</h3>
 				</div>
 				<!-- /.box-header -->
-				<!-- form start -->
-				<form class="form-horizontal">
+				<form n:name="updateResourceCategoryForm" class="form-horizontal">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="inputEmail3" class="col-sm-2 control-label">Název</label>
+							<label for="name" class="col-sm-2 control-label">Název</label>
 
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="inputEmail3" placeholder="Název kategorie">
+								<input n:name="name" type="text" class="form-control" id="name" autocomplete="off" placeholder="Název kategorie">
 							</div>
 						</div>
 					</div>
 					<!-- /.box-body -->
 					<div class="box-footer">
-						<button type="submit" class="btn btn-danger pull-right">Uložit změny</button>
+						<button n:name="submit" class="btn btn-danger pull-right">Uložit změny</button>
 					</div>
 					<!-- /.box-footer -->
 				</form>

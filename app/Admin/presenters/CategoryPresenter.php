@@ -6,6 +6,8 @@
 namespace App\Admin\Presenters;
 
 use App\Admin\Components\CreateResourceCategoryFormFactory;
+use App\Admin\Components\UpdateResourceCategoryFormFactory;
+use App\Admin\Model\Entities\Category;
 use App\Admin\Model\NotFoundException;
 use App\Admin\Model\Resources\CategoryManager;
 use App\Admin\Model\UpdateModelException;
@@ -18,6 +20,10 @@ class CategoryPresenter extends SecuredPresenter
 {
 	/** @var CreateResourceCategoryFormFactory @inject */
 	public $createResourceCategoryFormFactory;
+
+	/** @var UpdateResourceCategoryFormFactory @inject */
+	public $updateResourceCategoryFormFactory;
+
 
 	/**
 	 *
@@ -91,5 +97,14 @@ class CategoryPresenter extends SecuredPresenter
 	public function createComponentCreateResourceCategoryForm()
 	{
 		return $this->createResourceCategoryFormFactory->create();
+	}
+
+	public function createComponentUpdateResourceCategoryForm()
+	{
+		$factory = $this->updateResourceCategoryFormFactory;
+
+		$factory->setCategory($this->getCategoryManager()->find($this->getParameter('id')));
+
+		return $factory->create();
 	}
 }
