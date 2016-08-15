@@ -46,7 +46,6 @@ class CategoryPresenter extends SecuredPresenter
 	{
 		try {
 			$this->getCategoryManager()->moveUp($categoryId);
-			$this->redirect('this');
 		} catch (NotFoundException $e) {
 			$this->flashMessage('Kategorie neexistuje.', 'danger');
 		} catch (UpdateModelException $e) {
@@ -61,7 +60,6 @@ class CategoryPresenter extends SecuredPresenter
 	{
 		try {
 			$this->getCategoryManager()->moveDown($categoryId);
-			$this->redirect('this');
 		} catch (NotFoundException $e) {
 			$this->flashMessage('Kategorie neexistuje.', 'danger');
 		} catch (UpdateModelException $e) {
@@ -77,13 +75,11 @@ class CategoryPresenter extends SecuredPresenter
 		try {
 			$category = $this->getCategoryManager()->find($categoryId, CategoryManager::THROW_EXCEPTION);
 			$this->getCategoryManager()->remove($category);
-			$this->flashMessage('Kategorie smazána', 'success');
+			$this->flashMessage('Kategorie úspěšně smazána.', 'success');
 		} catch (NotFoundException $e) {
 			$this->flashMessage('Tato kategorie neexistuje.');
-			$this->redirect('Material:category');
 		} catch (UpdateModelException $e) {
 			$this->flashMessage('Nelze smazat', 'danger');
-			$this->redirect('Material:category');
 		}
 	}
 
