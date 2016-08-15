@@ -1,5 +1,4 @@
 {block content}
-{*}
 <div class="main-slider slider-pro" id="my-slider"
 	 data-slider-width="1920"
 	 data-slider-height="1080">
@@ -43,15 +42,19 @@
 	<!-- end sp-slides -->
 </div>
 <!-- end main-slider -->
-{*}
 
-<div class="mainScreen">
-	<div class="content">
-		<h2>Čerstvé chlebíčky Dino</h2>
-		<p class="hidden-xs">Každý den pro Vás chystáme čerstvé a pestré chlebíčky.</p>
-		<a class="ui-btn ui-btn_mod-a btn-effect" n:href="Menu:default">objednat online</a>
+<!-- HEADER -->
+<header class="header clearfix wow slideInUp" data-wow-duration="2s">
+	<div class="header__wrap">
+		<span class="sb-toggle-left"><i class="icon pe-7s-menu"></i></span>
+		<a class="logo" n:href="Homepage:default">Chlebíčky <img class="img-responsive"
+																 src="{$basePath}/resources/front/assets/img/logo_mod-a.png"
+																 alt="Logo"></a>
+		<span class="header-basket sb-toggle-right"><i class="icon pe-7s-cart"></i><span
+					class="header-basket__number">2</span></span>
 	</div>
-</div>
+</header>
+<!-- end header -->
 
 <section class="section-default">
 	<div class="container">
