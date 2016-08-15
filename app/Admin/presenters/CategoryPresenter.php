@@ -81,6 +81,8 @@ class CategoryPresenter extends SecuredPresenter
 		} catch (UpdateModelException $e) {
 			$this->flashMessage('Nelze smazat', 'danger');
 		}
+
+		$this->redirect('Category:default');
 	}
 
 	/**
