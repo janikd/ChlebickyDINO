@@ -58,18 +58,13 @@ class CreateResourceCategoryFormFactory extends Nette\Object
 	{
 		$presenter = $form->getPresenter();
 		try {
-
-			Debugger::barDump($values);
-
 			$category = new Category();
 			$category->setName($values->name);
 
-			Debugger::barDump($category);
-
 			$this->categoryManager->create($category);
 
-			$presenter->flashMessage('Uloženo.', 'success');
-			$presenter->redirect('Material:category');
+			$presenter->flashMessage('Nová kategorie přidáná. Nyní můžete přizpůsobit její pořadí použitím šipek.', 'success');
+			$presenter->redirect('Category:default');
 		} catch (CreateModelException $e) {
 			$presenter->flashMessage($e->getMessage(), 'danger');
 		}
