@@ -12,6 +12,7 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         'e7a6fd2e7a869bb207158e9416bdd9b0' => __DIR__ . '/..' . '/nette/application/src/compatibility.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '9d08842a2aa0dc42ee93aa591835610d' => __DIR__ . '/..' . '/kdyby/events/src/Doctrine/compatibility.php',
+        '1cefe5f73ea1b1a37cfc2027a767c141' => __DIR__ . '/..' . '/librette/doctrine-sortable/src/exceptions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -19,6 +20,10 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Console\\' => 26,
+        ),
+        'L' => 
+        array (
+            'Librette\\Doctrine\\Sortable\\' => 27,
         ),
         'D' => 
         array (
@@ -36,6 +41,10 @@ class ComposerStaticInit091ed5d24b4127ffc48411e34be2086f
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Librette\\Doctrine\\Sortable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/librette/doctrine-sortable/src',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
